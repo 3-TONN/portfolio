@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#020603" />
+  <meta name="color-scheme" content="dark" />
+  <meta name="description" content="Егор — репетитор по информатике. Подготовка к ОГЭ, ЕГЭ и школьной программе 5–11 класс. Онлайн-занятия." />
+  <meta property="og:title" content="ЕГОР // ИНФОРМАТИКА" />
+  <meta property="og:description" content="Подготовка к ОГЭ, ЕГЭ и школьной информатике без зубрёжки." />
+  <meta property="og:type" content="website" />
+  <title>ЕГОР // ИНФОРМАТИКА</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="progress" id="progress" aria-hidden="true"></div>
+
+  <div class="preloader" id="preloader" aria-label="Загрузка сайта">
+    <div class="boot" role="status" aria-live="polite">
+      <div class="boot-brand">EGOR<span>_</span></div>
+      <div class="boot-line">BOOTING TUTOR_OS... <span>OK</span></div>
+      <div class="boot-line">LOADING KNOWLEDGE_BASE <span>OK</span></div>
+      <div class="boot-line">CONNECTING TO EXAM_SYSTEM <span>OK</span></div>
+      <div class="boot-line">SYSTEM STATUS: <span>ONLINE</span></div>
+      <button class="btn btn-primary enter-system" id="enterSystem" type="button">
+        <span class="btn-label">[ ВОЙТИ В СИСТЕМУ ]</span>
+        <span class="btn-glitch" aria-hidden="true">[ ВОЙТИ В СИСТЕМУ ]</span>
+      </button>
+      <div class="boot-cursor">█</div>
+    </div>
+  </div>
+
+  <canvas id="matrix" aria-hidden="true"></canvas>
+  <div class="bg-image" aria-hidden="true"></div>
+  <div class="vignette" aria-hidden="true"></div>
+  <div class="scanlines" aria-hidden="true"></div>
+  <div class="noise" aria-hidden="true"></div>
+
+  <header class="nav container" id="nav">
+    <a class="brand" href="#top" aria-label="EGOR — на главную">E<span>G</span>OR<span class="brand-dot">_</span></a>
+    <nav class="desktop-nav" aria-label="Основная навигация">
+      <a href="#modules">Направления</a>
+      <a href="#protocol">Подход</a>
+      <a href="#results">Результаты</a>
+      <a href="#price">Стоимость</a>
+    </nav>
+    <div class="nav-right">
+      <div class="nav-status"><i></i> SYSTEM ONLINE</div>
+      <a class="nav-cta" href="#trial">[ FREE_TRIAL ]</a>
+      <button class="menu-toggle" id="menuToggle" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="mobileMenu"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <nav aria-label="Мобильная навигация">
+      <a href="#modules">01 // Направления</a>
+      <a href="#protocol">02 // Подход</a>
+      <a href="#results">03 // Результаты</a>
+      <a href="#about">04 // Обо мне</a>
+      <a href="#price">05 // Стоимость</a>
+      <a class="mobile-menu-cta" href="#trial">[ ЗАПИСАТЬСЯ ]</a>
+    </nav>
+  </div>
+
+  <main id="top">
+    <section class="hero container section" id="hero">
+      <div class="hero-terminal mono"><span class="terminal-prompt">&gt;</span> SYSTEM INITIALIZED<span class="blink">_</span></div>
+      <div class="hero-grid">
+        <div class="hero-copy reveal">
+          <p class="eyebrow">INFORMATICS // OGE // EGE</p>
+          <h1>Ты готов<br /><span>войти</span> в систему?</h1>
+          <p class="hero-sub">Егор — репетитор по информатике. Подготовка к ОГЭ, ЕГЭ и школьной программе без зубрёжки: практика, понятные объяснения и задачи.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary btn-large glitch-btn" href="#trial"><span>[ БЕСПЛАТНОЕ ПРОБНОЕ ]</span><i aria-hidden="true">[ БЕСПЛАТНОЕ ПРОБНОЕ ]</i></a>
+            <a class="btn btn-ghost" href="#protocol">[ КАК ЭТО РАБОТАЕТ ]</a>
+          </div>
+          <div class="hero-meta mono"><span>3 YEARS EXP</span><b>/</b><span>30+ STUDENTS</span><b>/</b><span>ONLINE</span></div>
+        </div>
+
+        <div class="terminal-card reveal reveal-delay" data-tilt>
+          <div class="terminal-head"><span>student_profile.exe</span><span class="window-dots" aria-hidden="true"><i></i><i></i><i></i></span></div>
+          <div class="terminal-body mono">
+            <p><span class="dim">$</span> whoami</p>
+            <p class="green">EGOR // INFORMATICS TUTOR</p>
+            <p><span class="dim">$</span> mission</p>
+            <p>understand &gt; memorize</p>
+            <p><span class="dim">$</span> target</p>
+            <p>OGE / EGE / SCHOOL_5-11</p>
+            <p><span class="dim">$</span> status</p>
+            <p class="green">READY_TO_LEARN<span class="blink">_</span></p>
+            <div class="terminal-line" aria-hidden="true"></div>
+            <p class="terminal-tip"><span class="dim">$</span> tip</p>
+            <p class="muted">не понял → спрашивай → разбираем</p>
+          </div>
+        </div>
+      </div>
+      <a class="scroll-hint mono" href="#status"><span>SCROLL_DOWN</span> ↓</a>
+    </section>
+
+    <section class="section container" id="status">
+      <div class="section-label mono">01 // SYSTEM_STATUS</div>
+      <div class="stats-grid reveal-group">
+        <article class="stat reveal"><strong>3</strong><span>года опыта</span><small>YEARS_EXP</small></article>
+        <article class="stat reveal"><strong>30+</strong><span>выпущенных учеников</span><small>STUDENTS</small></article>
+        <article class="stat reveal"><strong>72,34</strong><span>средний балл учеников</span><small>AVG_SCORE</small></article>
+        <article class="stat reveal"><strong>58,73</strong><span>средний показатель по России</span><small>RU_AVG</small></article>
+        <article class="stat reveal"><strong>4–5</strong><span>стабильные оценки на ОГЭ</span><small>OGE_RESULT</small></article>
+      </div>
+    </section>
+
+    <section class="section container" id="modules">
+      <div class="section-label mono">02 // AVAILABLE_MODULES</div>
+      <div class="split-heading reveal"><h2>Что будем<br /><span>прокачивать?</span></h2><p class="section-intro">Выбираем цель, находим пробелы и строим маршрут. Темп — под ученика.</p></div>
+      <div class="modules-grid reveal-group">
+        <article class="module-card reveal"><div class="module-num">01</div><div><h3>ОГЭ</h3><p>Разбираем формат экзамена, алгоритмы решения и типовые задачи. Цель — уверенная 4–5.</p></div><span class="module-arrow">↗</span></article>
+        <article class="module-card featured reveal"><div class="module-num">02</div><div><h3>ЕГЭ</h3><p>Системная подготовка к экзамену: от базы до сложных задач и стратегии набора баллов.</p></div><span class="module-arrow">↗</span></article>
+        <article class="module-card reveal"><div class="module-num">03</div><div><h3>5–11 КЛАСС</h3><p>Помощь со школьной программой, домашними заданиями и темами, которые хочется наконец понять.</p></div><span class="module-arrow">↗</span></article>
+      </div>
+    </section>
+
+    <section class="section container" id="protocol">
+      <div class="section-label mono">03 // TRAINING_PROTOCOL</div>
+      <div class="protocol-grid">
+        <div class="reveal"><h2>Не учим<br /><span>наизусть.</span></h2><p class="lead">Никакой зубрёжки и бесконечного переписывания теории. Только практика, понятные объяснения и задачи, которые действительно помогают разобраться.</p></div>
+        <div class="steps reveal-group">
+          <article class="reveal"><b>01</b><div><h3>Индивидуальный план</h3><p>Определяем цель, уровень и точки роста.</p></div></article>
+          <article class="reveal"><b>02</b><div><h3>Разбор задач</h3><p>Сложное переводим на понятный язык и закрепляем практикой.</p></div></article>
+          <article class="reveal"><b>03</b><div><h3>Домашняя работа</h3><p>Немного боли — зато навык остаётся. Домашки без них никуда.</p></div></article>
+          <article class="reveal"><b>04</b><div><h3>Контроль прогресса</h3><p>Промежуточные тесты показывают, что уже работает, а что нужно подтянуть.</p></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section container" id="results">
+      <div class="section-label mono">04 // RESULTS_DATABASE</div>
+      <div class="result-panel reveal">
+        <div class="result-copy"><p class="eyebrow">DATA // VERIFIED_BY_STUDENT_PROGRESS</p><h2>Цифры говорят<br /><span>громче слов.</span></h2><p>Средний балл учеников — <strong>72,34</strong>. Для сравнения, средний показатель по России — <strong>58,73</strong>.</p></div>
+        <div class="bar-chart mono" aria-label="Сравнение среднего балла">
+          <div class="bar-row"><span>МОИ УЧЕНИКИ</span><div class="bar"><i style="width:72.34%"></i></div><b>72,34</b></div>
+          <div class="bar-row"><span>РОССИЯ</span><div class="bar"><i style="width:58.73%"></i></div><b>58,73</b></div>
+          <div class="chart-note">+13,61 балла к среднему показателю</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section container" id="about">
+      <div class="section-label mono">05 // OPERATOR_PROFILE</div>
+      <div class="about-grid">
+        <div class="about-code mono reveal"><span class="green">const</span> tutor = {<br />&nbsp;&nbsp;name: <em>"Егор"</em>,<br />&nbsp;&nbsp;subject: <em>"Информатика"</em>,<br />&nbsp;&nbsp;format: <em>"Online"</em>,<br />&nbsp;&nbsp;school: <em>"Онлайн-школа"</em>,<br />&nbsp;&nbsp;style: <em>"Практика + понимание"</em>,<br />&nbsp;&nbsp;location: <em>"Хабаровск"</em><br />};</div>
+        <div class="reveal"><h2>Современный<br /><span>подход.</span></h2><p class="lead">Объясняю на понятных примерах, использую интерактивные задачи и поддерживаю дружескую атмосферу. Работаю в онлайн-школе и провожу занятия онлайн — без ощущения, что ты попал на лекцию из прошлого века.</p><div class="chips"><span>ОНЛАЙН-ШКОЛА</span><span>ZOOM</span><span>DISCORD</span><span>ONLINE</span><span>5–11 КЛАСС</span></div></div>
+      </div>
+    </section>
+
+    <section class="section container" id="price">
+      <div class="section-label mono">06 // ACCESS_LEVEL</div>
+      <div class="price-card reveal"><div><p class="eyebrow">STANDARD_SESSION</p><div class="price">1000–1500 ₽ <small>/ 60 мин</small></div><p>Индивидуальные занятия и мини-группы. Формат — онлайн.</p></div><div class="price-side"><div class="price-tag mono">ACCESS: AVAILABLE</div><a class="btn btn-ghost" href="#trial">[ УТОЧНИТЬ ФОРМАТ ]</a></div></div>
+    </section>
+
+    <section class="section container faq-section" id="faq">
+      <div class="section-label mono">07 // FAQ_DATABASE</div>
+      <div class="split-heading reveal"><h2>Частые<br /><span>вопросы.</span></h2><p class="section-intro">Коротко отвечаю на то, что обычно хочется узнать до первого занятия.</p></div>
+      <div class="faq-list reveal-group">
+        <details class="faq reveal"><summary>Как проходит занятие?<span>+</span></summary><p>Онлайн: созваниваемся, разбираем текущую тему или пробелы, решаем задачи и фиксируем, что нужно закрепить дальше.</p></details>
+        <details class="faq reveal"><summary>Можно начать с нуля?<span>+</span></summary><p>Да. Сначала определяем текущий уровень и цель, после чего собираем последовательный маршрут без перегруза.</p></details>
+        <details class="faq reveal"><summary>Есть ли домашние задания?<span>+</span></summary><p>Да, объём подбирается под ученика. Задача домашней работы — закрепить навык, а не завалить теорией.</p></details>
+        <details class="faq reveal"><summary>Как записаться?<span>+</span></summary><p>Напишите в Telegram или VK. На пробном занятии можно познакомиться, определить уровень и понять следующий шаг.</p></details>
+      </div>
+    </section>
+
+    <section class="section container trial" id="trial">
+      <div class="trial-inner reveal">
+        <div class="hero-terminal mono">&gt; FINAL_QUESTION</div>
+        <h2>Ты готов<br /><span>войти в систему?</span></h2>
+        <p>Запишись на бесплатное пробное занятие. Познакомимся, определим уровень и поймём, с чего начать.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary btn-large glitch-btn" href="https://t.me/ZA_DLRA" target="_blank" rel="noopener noreferrer"><span>[ TELEGRAM ]</span><i aria-hidden="true">[ TELEGRAM ]</i></a>
+          <a class="btn btn-ghost" href="https://vk.com/geometryblat" target="_blank" rel="noopener noreferrer">[ VKONTAKTE ]</a>
+        </div>
+        <div class="contact-hint mono"><span class="status-dot"></span> Обычно отвечаю в личных сообщениях</div>
+      </div>
+    </section>
+  </main>
+
+  <a class="floating-telegram" href="https://t.me/ZA_DLRA" target="_blank" rel="noopener noreferrer" aria-label="Написать Егору в Telegram">TG <span>→</span></a>
+  <button class="back-top" id="backTop" type="button" aria-label="Вернуться наверх">↑</button>
+
+  <footer class="footer container"><div class="mono">EGOR // INFORMATICS_TUTOR</div><div class="mono">© <span id="year"></span> ALL SYSTEMS ONLINE</div></footer>
+  <script src="script.js"></script>
+</body>
+</html>
